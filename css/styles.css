@@ -1,0 +1,445 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    border: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+nav { 
+    box-sizing: border-box;
+    width: 100%; 
+    background-color: #37303f;
+    position: relative;
+    height: 80px;
+}
+  
+#logo { 
+    width: 10%;
+    margin-left: 6%;
+}
+#logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    vertical-align: middle;
+    margin-left: 2.5%;
+    color: gray; 
+    text-decoration: none;  
+}
+
+#conf {
+    height: 100%;
+    display: inline-block;
+    padding-bottom: 50%;
+    margin-bottom: 50%;
+    color: white;
+    font-size: larger;
+    
+}
+
+.caja {
+    width: 45%;
+    display: inline-block;
+    position: absolute; 
+    margin-left: 21.5%;
+    padding-top: 2%;
+} 
+
+nav a:hover{
+    color: white ;
+    text-decoration: none;
+}
+
+#nav-tickets {
+    color: #28a744;
+}
+
+/* ============PORTADA============== */
+
+.portada {
+    position: relative; 
+    background-color: whitesmoke;
+    filter: brightness(50%);  
+    width: 100%;
+    height: 90%;
+    margin:0;
+    border: 0;
+}
+.portada img {
+    width: 100%;
+}
+
+
+.titulo-portada {
+    position:absolute;
+    display: block;
+    top: 46%;
+    right: 8%;
+    padding: 1%; 
+    bottom: 1%; 
+    left: 52%; 
+    color: white;
+    font-family: "Lato", sans-serif;
+    text-align: right;
+}
+h1 { 
+    font-weight: bold;
+    font-size: 2.1em;
+}   
+
+.titulo-portada p {
+    font-family: 'Lato', sans-serif ;
+    font-size: 1.05em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.botones-portada { 
+    position: absolute;
+    display: block;
+    right: 1%;
+    bottom:15%;
+    width: 100%;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+
+    height: 2.5em;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    color:greenyellow;
+}
+
+.transp {
+    background-color: transparent; 
+    width: 35%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+#tickets {
+    background-color: #28a744;
+    width: 35%;
+}
+
+
+/* ============ ORADORES ================= */
+
+main{
+    display: block;
+    position: relative;
+}
+
+#container-oradores {
+    width: 70%;
+}
+.oradores-titulo {
+    position:relative;
+    text-align: center;
+    line-height: 1.5em;
+}
+.oradores-titulo p {
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    font-family: "Lato", sans-serif;
+}
+
+.oradores-titulo h2 {
+    font-size: 1.75em;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    line-height: normal;
+}
+
+#los-oradores h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+}
+
+#los-oradores p {
+    font-family: "Lato", sans-serif;
+    font-size: smaller;
+}
+
+.cuadro {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 6px;
+    margin: 1%;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.cuadro:hover {
+    transform: scale(1.02);
+}
+
+#Steve {
+    margin-left: 0;
+}
+
+.foto-orador { 
+    position: relative;
+    width: 100%;
+    margin-bottom: 8%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tema {
+    display: inline-block;
+    padding: 1.5%;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+.t1{
+    margin: 2% 0 1% 4.5%;
+    color: darkslategray;
+}
+.t2 {
+    margin: 2% 1% 1% 0;
+    color: whitesmoke;
+}
+
+#objective {
+    background-color: yellow;    
+}
+#swift {
+    background-color: darkred;
+}
+#no-code {
+    background-color: lightskyblue;
+}
+#win-app {
+    background-color: blueviolet;
+}
+#ia {
+    background-color: violet;
+}
+#analytical-eng {
+    background-color:cornflowerblue;
+}
+.texto-orador {
+    width: 90%;
+    font-family: "Lato", sans-serif;
+    text-align: justify;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: smaller;
+    line-height: 1.7em;
+}
+
+/* ================ LUGAR ==================*/
+
+#BA-lugar{
+    position: relative;
+    width: 100%;
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+    background-color: #37303f;
+    }
+
+#carousel-ba  {
+    width: 49.9%;
+    height:100%;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+    padding: 0;
+ }     
+ 
+#octubre-txt {
+    width: 49%;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    background-color: #37303f;
+    color: #FFF;
+    line-height: 2em;
+    padding: 2%;
+    text-align: justify; 
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+}
+
+#conoce {
+    margin-left: 0;
+}
+main, section {
+    margin-bottom: 1em;
+}
+.oradores, .BA-lugar, .conviertete {
+    margin-bottom: 2em;
+}
+
+/*================= CONVERTITE ============*/
+.convertite {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+span {
+    text-decoration-line: underline;
+    text-decoration-style: dotted ;
+    text-decoration-color: black;
+}
+
+.inscripcion-form {
+    margin-top: 4%;
+    position: relative;  
+}
+
+.input {
+    display: inline-block;
+    margin: 0 2.5% 2% 2%;
+    padding: 1% 1%;     
+    width: 45%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: gray;   
+}
+
+#inscripcion-txt {
+    position: relative;
+    display: block;
+    margin: 1% 0 2% 2%;
+    padding: 0%;
+    width: 94%;
+    border-style:none;
+}
+ #tema-charla { 
+    display: block;
+    position: relative;
+    padding: 1%;
+    min-width: 95%;
+    margin-left: 2%;
+    height: 200px;
+    border-radius: 10px; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 10px;
+} 
+
+#btn_inscripcion {
+    width: 95%;   
+    background-color:  #97c83e;
+    font-size: larger;
+}
+
+/*================= FOOTER ==================*/
+
+footer {
+    background: linear-gradient(to right, #1d3744, #1d5271);
+    color: whitesmoke;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    flex-direction: row;
+    padding: 2% 0;
+    flex-wrap: nowrap;
+}
+
+.footer-item {
+    padding: 1% 3%;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+/* ================ END HOME ===============*/
+
+/* ================ TICKETS ================*/
+html {
+    height: 10vh;
+}
+#contact-div{
+    margin: 0 10%;
+}
+
+form textarea{
+    display: block;
+    margin: 0;
+    padding: 1% 2%;
+    width: 50%; 
+    border-radius: 10px; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;    
+}
+form label, form legend {
+    display: block;
+    font-size: 1.3em;
+    margin: 1.5% 0 1.5%;   
+}
+fieldset {
+    margin-top: 2%;
+}
+
+select {
+    margin: 2% 0;
+}
+.input-padron{
+        display: inline-block;
+        margin: 0 0 2%;
+        padding: 1% 1%;     
+        width: 30%;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #E7EAEF;
+}   
+.checkbox {
+   margin: 2% 0 4% 0; 
+   color: white;
+}
+
+.enviar {
+    padding: 1%;
+    width:30%;
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient( #28a744, greenyellow);
+    border: none;
+    border-radius: 10px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover { 
+    background: linear-gradient(greenyellow, #28a744);
+    transform: scale(1.1); /*rotate(70deg); */
+}
