@@ -3,26 +3,37 @@ var apellido = document.getElementById("apellido");
 var correo = document.getElementById("correo");
 var cantidad = document.getElementById("input-cantidad");
 var categ = document.getElementById("input-categoria");
-
+var verifMail = true;
+var verifNomb = true;
+var verifApell = true;
 const precio = 200;
 
 function borrarData() {
     nombre.value = "";
     apellido.value = "";
     correo.value = "";
-    cantidad.value = "";
+    cantidad.value = "0";
     categ.value = "";
     document.getElementById("calculado").textContent = "Total a pagar: $ ";
 }
 
 function dataInput() {
-    calculaTotal();
-    validateEmail()
+    validateData();
+    validateEmail();
+    if ((verifMail == false) || (verifNomb == false) || (verifApell == false)) {
+        borrarData();
+        cantidad.value = "";
+     }
+
+     calcTotal();
+ 
+     verifMail = true ;
+     verifNomb = true;
+     verifApell = true;
 }
 
-function calculaTotal() {
+function calcTotal() {
     let cant = Math.trunc(cantidad.value);
-    console.log(cant);
     cantidad.value = "";
     cantidad.value = cant;
     let cat = categ.value;
@@ -32,14 +43,18 @@ function calculaTotal() {
 }
 
 function validateEmail() {
-   console.log(correo.value);
-   
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value))
-  {
-    return (true)
-  }
-    correo.value = "";
-    alert("Dirección de e-mail inválida");
-        
-    return (false)
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value)){
+        verifMail = true;   
+    } else {
+        correo.value = "";
+        alert("Dirección de e-mail inválida");
+        verifMail = false;   
+}}
+
+function validateData () {
+    if ((nombre.value == "") ||(apellido.value == "" )) {
+        alert ("Nombre y apellido son datos requeridos");
+        verifNomb = false;
+        verifApell = false;  
+    }  
 }
