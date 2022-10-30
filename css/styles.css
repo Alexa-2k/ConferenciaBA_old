@@ -6,9 +6,8 @@
 }
 
 html, body{
-    height: 100%;
+    min-height: 100vh;
 }
-
 
 nav { 
     box-sizing: border-box;
@@ -20,7 +19,7 @@ nav {
   
 #logo { 
     width: 10%;
-    margin-left: 6%;
+    margin-left: 4.5%;
 }
 #logo:hover {
     transform: scale(1.1);
@@ -28,7 +27,7 @@ nav {
 
 nav a {
     vertical-align: middle;
-    margin-left: 2.5%;
+    margin-left: 2.66%;
     color: gray; 
     text-decoration: none;  
 }
@@ -45,9 +44,10 @@ nav a {
 
 .caja {
     width: 45%;
-    display: inline-block;
-    position: absolute; 
-    margin-left: 21.5%;
+    display: inline-flex;
+    /* position: absolute;  */
+    justify-content: space-between;
+    margin-left: 22.5%;
     padding-top: 2%;
 } 
 
@@ -55,6 +55,9 @@ nav a:hover{
     color: white ;
     text-decoration: none;
 }
+
+
+
 
 #nav-tickets {
     color: #28a744;
@@ -367,14 +370,18 @@ footer {
     font-family: "Lato", sans-serif;
     font-weight: bold;
     flex-direction: row;
-    padding: 2% 0;
+    padding: 0.5% 0;
     flex-wrap: nowrap;
+    height: 60px ;
+    align-self: baseline;
+
 }
 
 .footer-item {
-    padding: 1% 3%;
+    padding: 1% 3% 0 3%;
     text-align: center;
     flex-wrap: wrap;
+    max-height: 50px;
 
 }
 
@@ -384,62 +391,192 @@ footer {
 html {
     height: 10vh;
 }
+body{ min-height: 100vh; margin:0; }
+
+
+/* =============== HEADER ======== */
 #contact-div{
     margin: 0 10%;
 }
 
-form textarea{
-    display: block;
-    margin: 0;
-    padding: 1% 2%;
-    width: 50%; 
-    border-radius: 10px; 
+.nav-tickets {
+    height: 55px;
+    padding-top: 0.5%;
+}
+
+.caja-tickets {
+    width: 55%;
+    vertical-align: middle;
+    display: inline-flex;
+    position: relative; 
+    margin-left: 25%;
+    padding-bottom: 0.4%;
+    justify-content: right;
+} 
+
+.conf-tickets {
+    display: inline-block;
+    margin-top: 0.2rem;
+    color: white;
+    font-size: larger;
+    margin-left: 5%;
+    
+}
+/* ==============MAIN - CATEGORIAS =============== */
+#container-categorias {
+    margin-top: 2%;
+    width: 55%;
+    align-items: center;
+}
+#container-categorias h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    margin: 5%;
+}
+
+#container-categorias h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5%;
+}
+.discount {
+    font-weight: bolder;
+    text-decoration-line: none;
+    margin: 5%;
+}
+.discount:hover {
+    transform: scale(2);
+    font-size: 30px;
+    text-decoration-line: none;
+    color:  #97c83e;
+    font-weight: 800;
+}
+
+#container-categorias p {
+    font-family: "Lato", sans-serif;
+    font-size:smaller ;
+    margin: 5%;
+}
+
+.card {
+    border-style: solid;
+    border-width: 3px;
+    margin: 0.5%;
+    padding: 2% 0;
+    width:30%;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.card-estudiante {
+    border-color: #6796ca;
+}
+
+.card-trainee{ 
+    border-color:#79afb9;
+}
+
+.card-junior {
+    border-color:#e7d084 ;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-width: 5px;
+}
+
+/* ============ FORM VENTA ============ */
+
+.venta {
+    width: 58%;
+}
+
+.venta-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+.input-venta {
+    padding: 1% 1%; 
     border-style: solid;
     border-width: 1px;
-    border-color: #E7EAEF;    
+    border-color:#e4eaf5;
+    border-radius: 2px;    
+    
 }
-form label, form legend {
-    display: block;
-    font-size: 1.3em;
-    margin: 1.5% 0 1.5%;   
+.nombre {
+    display: inline-block;
+    width: 49%;
+    margin: 2.5% 0;
 }
-fieldset {
+.venta-email {
+    width: 100%;
+    margin: 0;
+}
+
+.form-titulos {
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+padding: 0;
+margin-top: 2%;
+justify-content:space-between;
+}
+
+.cantidad-categoria {
+    text-align: left;
+    width: 49%;
     margin-top: 2%;
+    margin-bottom: 1%;
+    font-weight: 600;
+}
+ .datos {
+    width: 100%;   
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+ }
+  
+#input-cantidad, #input-categoria {
+    width: 49%;
+ } 
+
+.resultado {
+    background-color:#cbe5fe;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2px;
+    margin-top: 5%;
+    padding: 2%;
+
+}
+.botones-venta {
+display: flex;
+justify-content: space-between;
 }
 
-select {
-    margin: 2% 0;
-}
-.input-padron{
-        display: inline-block;
-        margin: 0 0 2%;
-        padding: 1% 1%;     
-        width: 30%;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: #E7EAEF;
-}   
-.checkbox {
-   margin: 2% 0 4% 0; 
-   color: white;
-}
-
-.enviar {
+.btn-venta {
+    background-color:  #97c83e;
+    width: 49%;
+    display:inline-block;
+    position: relative;
+    height: 2.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
     padding: 1%;
-    width:30%;
-    margin-bottom: 2em;
-    font-size: 1.2em;
-    font-weight: bold;
     color: white;
-    background: linear-gradient( #28a744, greenyellow);
-    border: none;
-    border-radius: 10px;
-    transition: 1s all;
-    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+
 }
 
-.enviar:hover { 
-    background: linear-gradient(greenyellow, #28a744);
-    transform: scale(1.1); /*rotate(70deg); */
+.btn-venta:hover {
+        background: linear-gradient(greenyellow, #28a744);
+        transform: scale(1.05);
 }
+
+

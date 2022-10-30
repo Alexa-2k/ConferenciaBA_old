@@ -13,7 +13,7 @@
 
     <!-- STYLE & FONTS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reset-styles.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,87 +21,190 @@
         rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>  
-          <a href="https://www.buenosaires.gob.ar/educacion/codo-codo"><img src="Images/codoacodo.png" alt="Logo-codo-a-codo" id = "logo"></a>
-          <div id = "conf">
-              <p>Conf Bs As</p>
+  <header>
+    <nav class="nav-tickets">
+        <div class = "conf-tickets">
+          <p>Conf Bs As</p>
+        </div>
+      <div class="caja-tickets">
+        <a class="link link-tickets" href="./index.html#conferencia">La conferencia</a>
+        <a class="link link-tickets" href="./index.html#oradores">Los oradores</a>
+        <a class="link link-tickets" href="./index.html#lugar">El lugar y la fecha</a>
+        <a class="link link-tickets" href="./index.html#inscripcion">Convertite en orador</a>
+        <a class="link link-tickets" href="tickets.html" id="nav-tickets">Comprar tickets</a>
+      </div>
+    </nav>
+   </header>
+   <!-- MAIN - CATEGORIAS -->
+   <main>
+      <div class="container" id="container-categorias">
+        <div class="row">
+
+          <div class="col card card-estudiante" id= "estudiantes">
+            <div class = categoria>
+            <h3> Estudiantes</h3>
             </div>
-          <div class="caja">
-            <a class="link" href="index.html">Home</a>
+            <div class=texto-desc>
+              <h4>Tienen un descuento de </h4>
+            </div>
+            <div class="discount"><h3> 80 % </h3></div>
+            <div class="aclaracion"> <p>* presentar documentación</p></div>
           </div>
-    
-        </nav>
-    <main>
-        <h2 class="titulo-principal"> Tickets</h2>
-        <section id="contact-div">
-            <form>
-                <label for="nombreyapellido">Nombre y apellido</label>
-                <input type="text" id="nombreapellido" class="input-padron" required>
-                <!-- Los dos inputtype que siguen, email y tel se consultaron de mobileinputtypes.com para que sean validos para celulares y habiliten opciones de teclado numerico, etc. El de nombre se dejó como txt porque da igual -->
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" class="input-padron" required placeholder="usuario@dominio.com">
+          <div class="col card card-trainee" id= "trainee">
+            <div class = categoria>
+              <h3> Trainee</h3>
+            </div>
+            <div class=texto-desc>
+              <h4>Tienen un descuento de </h4>
+            </div>
+            <div class="discount"><h3> 50 % </h3></div>
+            <div class="aclaracion"> <p>* presentar documentación</p></div>
+          </div>
 
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
-
-                <fieldset>
-                    <legend>Forma de pago</legend>
-
-                    <!--Forma normal de declarar input con labels: 
-                        <label for="radio-email">E-mail</label>
-                        <input type="radio" name="contacto" value="email" id="radio-email"> 
-                        Puedo insertar el tipo de input y me ahorro un renglón de declaración de tipo de input pero me queda el casillero arriba del texto porque heredan la propiedad de form, que es block. Eso lo arreglo dandole una clase a estos inputs: 
-                    -->
-                    <label><input type="radio" name="pago" value="debito" id="radio-email" checked>Tarjeta de
-                        débito</label>
-
-                    <!--el "name" igual en los tres (en este caso: contacto) hace que formen parte del mismo grupo y sólo sea posible seleccionar uno de ellos -->
-
-                    <label><input type="radio" name="pago" value="credito" id="radio-telefono"> Tarjeta de
-                        crédito</label>
-                    <label><input type="radio" name="pago" value="transferencia" id="radio-whatsapp">
-                        Transferencia</label>
-                </fieldset>
-                <input type="submit" value="Enviar" class="enviar">
-            </form>
-        </section>
+          <div class="col card card-junior" id= "junior">
+            <div class = categoria>
+              <h3> Junior</h3>
+            </div>
+            <div class=texto-desc>
+              <h4>Tienen un descuento de </h4>
+            </div>
+            <div class="discount"><h3> 15 % </h3> </div>
+            <div class="aclaracion"> <p>* presentar documentación</p></div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer>
-       <div class="container">
-           <div class="row">
+<!-- SECTION VENTAS -->
+
+<section class="container venta" >
+    <a name="venta-tickets"></a>
+    <div class="oradores-titulo">
+      <p>VENTA</p>
+      <h2>VALOR DEL TICKET $200</h2>
+    </div>
+
+    <div class = "formulario" >
+      <form>
+          <div class="container venta-form">
+              <input type="text"  class="input-venta nombre" placeholder = "Nombre" id = "nombre">
+              <input type="text" id="apellido" class="input-venta nombre" placeholder = "Apellido">
+
+              <input type="email"  class="input-venta venta-email" id = "correo" placeholder = "Correo" >
+
+
+            <div class="container form-titulos">
+              <div class="cantidad-categoria">
+                  <p>Cantidad</p>
+                </div>
+                <div class="cantidad-categoria">
+                  <p>Categoria</p>
+                </div>
+             </div> 
+
+            <div class="container datos">
+              <input type="number" min="0"  id = "input-cantidad" class="input-venta" placeholder = "Cantidad">
+              <select name="input-categoria" id="input-categoria" class="input-venta categoria" >
+                  <option value = 1>Público general</option>
+                  <option value = 0.2>Estudiante</option>
+                  <option value = 0.5>Trainee</option>
+                  <option value = 0.85>Junior</option>
+              </select>
+            </div>
+
+            <div  class = "resultado" id = "resultado">
+                <p id="calculado">Total a pagar: $ </p>
+            </div>
+
+          </div>
+      </form>
+    </div>
+         
+         <div class = "container botones-venta">
+            <button type="submit" class= btn-venta id="btn_borrar" onclick = borrarData() >
+              Borrar
+            </button>
+            <button type="submit" class= btn-venta id="btn_resumen"  onclick = dataInput()>
+              Resumen
+            </button>
+          </div>
      
-             <div class="col ">
+  </section>
+  <script src="conferencia.js"></script>
+
+
+<!-- ======  FOOTER ========= -->
+
+  <footer>
+    <div class="container">
+        <div class="row">
+
+          <div class="col footer-item ">
+            <p>Preguntas frecuentes</p>
+          </div>
+
+          <div class="col footer-item">
+            <p>Contactanos</p>
+          </div>
+
+          <div class="col footer-item">
+            <p>Prensa</p>
+          </div>
+
+          <div class="col footer-item">
+            <p>Conferencias</p>
+          </div>
+
+          <div class="col footer-item ">
+            <p>Términos y condiciones</p>
+          </div>
+
+          <div class="col footer-item">
+            <p>Privacidad</p>
+          </div>
+          <div class="col footer-item">
+            <p>Estudiantes</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>
+
+    <!-- <footer>
+       <div class="container tickets-footer">
+           <div class="row">
+
+             <div class="col footer-col ">
                <p>Preguntas frecuentes</p>
              </div>
-     
-             <div class="col ">
+
+             <div class="col footer-col ">
                <p>Contactanos</p>
              </div>
-     
-             <div class="col ">
+
+             <div class="col footer-col ">
                <p>Prensa</p>
              </div>
-     
-             <div class="col ">
+
+             <div class="col footer-col ">
                <p>Conferencias</p>
              </div>
-     
-             <div class="col ">
+
+             <div class="col footer-col ">
                <p>Términos y condiciones</p>
              </div>
-     
-             <div class="col ">
+
+             <div class="col footer-col ">
                <p>Privacidad</p>
              </div>
-             <div class="col ">
+             <div class="col footer-col ">
                <p>Estudiantes</p>
              </div>
-             
+
            </div>
          </div>
-       </footer>
-
-</body>
+       </footer> -->
