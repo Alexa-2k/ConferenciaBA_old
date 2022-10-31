@@ -192,7 +192,8 @@ main{
 }
 
 .cuadro:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); 
+    transition: 0.3s;
 }
 
 #Steve {
@@ -445,6 +446,7 @@ body{ min-height: 100vh; margin:0; }
 }
 .discount:hover {
     transform: scale(2);
+    transition: 0.3s;
     font-size: 30px;
     text-decoration-line: none;
     color:  #97c83e;
@@ -468,7 +470,7 @@ body{ min-height: 100vh; margin:0; }
 }
 
 .card-estudiante {
-    border-color: #6796ca;
+    border-color: #6796ca; 
 }
 
 .card-trainee{ 
@@ -480,8 +482,9 @@ body{ min-height: 100vh; margin:0; }
 }
 
 .card:hover {
-    transform: scale(1.02);
-    border-width: 5px;
+    /* transform: scale(1.02); */
+    transition: 0.3s;
+    border-width: 4px;
 }
 
 /* ============ FORM VENTA ============ */
@@ -581,11 +584,10 @@ justify-content: space-between;
 .alerta {
     display: none;
     width: 50%;
-    padding: 0 0.5% 0.5% 0.5% ;
-    
-    background-color: white;
+    padding: 0.5% ;
+    background-color: #fffff0;
     color: #AAA;
-    border: #6f3ec7 solid 5px;
+    border: #ffc900 solid 5px;
     border-radius: 5px;
     opacity: 1;
     z-index: index 1;
@@ -596,22 +598,24 @@ justify-content: space-between;
     left: 25%;
     text-align: center;
   }
-  
-  /* .alert.success {background-color: #04AA6D;}
-  .alert.info {background-color: #2196F3;}
-  .alert.warning {background-color: #ff9800;} */
+ .mensaje {
+    margin: 1.5% auto;
+ }
   
   .closebtn {
     margin-left: 15px;
-    color: red;
-    font-weight: bold;
+    background-color: #FFA1A1;
+    color: #FFF;
+    font-weight: bolder;
     float: right;
     font-size: 22px;
-    line-height: 20px;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .closebtn:hover {
-    color: black;
+    transform: scale(1.5);
+    transition: 0.3s;
   }
