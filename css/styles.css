@@ -126,6 +126,7 @@ h1 {
 .btn:hover {
     transform: scale(1.1);
     transition: 0.3s;
+    color:  #CF0;
 }
 
 .transp {
