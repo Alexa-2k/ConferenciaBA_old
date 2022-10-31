@@ -24,6 +24,7 @@ nav {
 }
 #logo:hover {
     transform: scale(1.1);
+    transition: 0.3s;
 }
 
 nav a {
@@ -124,7 +125,7 @@ h1 {
 
 .btn:hover {
     transform: scale(1.1);
-    color:greenyellow;
+    transition: 0.3s;
 }
 
 .transp {
@@ -388,7 +389,7 @@ footer {
 
 /* ================ TICKETS ================*/
 html {
-    height: 10vh;
+    height: 100vh;
 }
 body{ min-height: 100vh; margin:0; }
 
@@ -482,7 +483,6 @@ body{ min-height: 100vh; margin:0; }
 }
 
 .card:hover {
-    /* transform: scale(1.02); */
     transition: 0.3s;
     border-width: 4px;
 }
@@ -569,7 +569,7 @@ justify-content: space-between;
     font-size: 1.1rem;
     padding: 1%;
     color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-top: 5%;
     margin-bottom: 3%;
 
@@ -578,6 +578,7 @@ justify-content: space-between;
 .btn-venta:hover {
         background: linear-gradient(greenyellow, #28a744);
         transform: scale(1.05);
+        transition: 0.3s;
 }
 
 /* ================= ALERT ==================== */
