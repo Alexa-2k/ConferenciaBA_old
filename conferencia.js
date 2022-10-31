@@ -36,7 +36,7 @@ function dataInput() {
 
 function calcTotal() {
     correo.style.outline="1px solid #e4eaf5";
-    let cant = Math.trunc(cantidad.value);
+    let cant = Math.abs(Math.trunc(cantidad.value));
     cantidad.value = "";
     cantidad.value = cant;
     let cat = categ.value;
@@ -50,45 +50,30 @@ function validateEmail() {
         verifMail = true;   
     } else {
         correo.value = ""
-        // correo.style.outline="4px solid #fa7373";
         alertaMail();
         verifMail = false;   
 }}
 
 function validateData () {
     if ((nombre.value == "") ||(apellido.value == "" )) {
-        // alert ("Nombre y apellido son datos requeridos");
-       alertaNombre();
+        alertaNombre();
         verifNomb = false;
         verifApell = false;  
     }  
 }
 
-function noAlertaMail() {
-    console.log("NO alerta mail");
+function noAlertaMail() { 
     document.getElementById("alerta-email").style.display = 'none';
-    document.getElementById("venta").style.display = 'block';
-    console.log("NO alerta mail");
-    
 }
 
 function alertaMail() {
-    console.log("alerta mail");
     document.getElementById("alerta-email").style.display = 'block';
-    document.getElementById("venta").style.display = 'none';
-    console.log("alerta mail");
 }
 
 function alertaNombre() {
-    console.log("alerta nombre");
     document.getElementById("alerta-nombre").style.display = 'block';
-    document.getElementById("venta").style.display = 'none';
-    console.log("alerta nombre");
 }
 
 function noAlertaNombre () {
-    console.log("NO alerta nombre");
     document.getElementById("alerta-nombre").style.display = 'none';
-    document.getElementById("venta").style.display = 'block';
-    console.log("NO alerta nombre");
 }
