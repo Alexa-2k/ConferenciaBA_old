@@ -1,0 +1,617 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    border: 0;
+}
+
+html, body{
+    min-height: 100vh;
+}
+
+
+nav { 
+    box-sizing: border-box;
+    width: 100%; 
+    background-color: #37303f;
+    position: relative;
+    height: 80px;
+}
+  
+#logo { 
+    width: 10%;
+    margin-left: 4.5%;
+}
+#logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    vertical-align: middle;
+    margin-left: 2.66%;
+    color: gray; 
+    text-decoration: none;  
+}
+
+#conf {
+    height: 100%;
+    display: inline-block;
+    padding-bottom: 50%;
+    margin-bottom: 50%;
+    color: white;
+    font-size: larger;
+    
+}
+
+.caja {
+    width: 45%;
+    display: inline-flex;
+    /* position: absolute;  */
+    justify-content: space-between;
+    margin-left: 22.5%;
+    padding-top: 2%;
+} 
+
+nav a:hover{
+    color: white ;
+    text-decoration: none;
+}
+
+#nav-tickets {
+    color: #28a744;
+}
+
+/* ============PORTADA============== */
+
+.portada {
+    position: relative; 
+    background-color: whitesmoke;
+    filter: brightness(50%);  
+    width: 100%;
+    height: 90%;
+    margin:0;
+    border: 0;
+}
+.portada img {
+    width: 100%;
+}
+
+
+.titulo-portada {
+    position:absolute;
+    display: block;
+    top: 46%;
+    right: 8%;
+    padding: 1%; 
+    bottom: 1%; 
+    left: 52%; 
+    color: white;
+    font-family: "Lato", sans-serif;
+    text-align: right;
+}
+h1 { 
+    font-weight: bold;
+    font-size: 2.1em;
+}   
+
+.titulo-portada p {
+    font-family: 'Lato', sans-serif ;
+    font-size: 1.05em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.botones-portada { 
+    position: absolute;
+    display: block;
+    right: 1%;
+    bottom:15%;
+    width: 100%;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+
+    height: 2.5em;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    color:greenyellow;
+}
+
+.transp {
+    background-color: transparent; 
+    width: 35%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+#tickets {
+    background-color: #28a744;
+    width: 35%;
+}
+
+
+/* ============ ORADORES ================= */
+
+main{
+    display: block;
+    position: relative;
+}
+
+#container-oradores {
+    width: 70%;
+}
+.oradores-titulo {
+    position:relative;
+    text-align: center;
+    line-height: 1.5em;
+}
+.oradores-titulo p {
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    font-family: "Lato", sans-serif;
+}
+
+.oradores-titulo h2 {
+    font-size: 1.75em;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    line-height: normal;
+}
+
+#los-oradores h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+}
+
+#los-oradores p {
+    font-family: "Lato", sans-serif;
+    font-size: smaller;
+}
+
+.cuadro {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 6px;
+    margin: 1%;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.cuadro:hover {
+    transform: scale(1.02);
+}
+
+#Steve {
+    margin-left: 0;
+}
+
+.foto-orador { 
+    position: relative;
+    width: 100%;
+    margin-bottom: 8%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tema {
+    display: inline-block;
+    padding: 1.5%;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+.t1{
+    margin: 2% 0 1% 4.5%;
+    color: darkslategray;
+}
+.t2 {
+    margin: 2% 1% 1% 0;
+    color: whitesmoke;
+}
+
+#objective {
+    background-color: yellow;    
+}
+#swift {
+    background-color: darkred;
+}
+#no-code {
+    background-color: lightskyblue;
+}
+#win-app {
+    background-color: blueviolet;
+}
+#ia {
+    background-color: violet;
+}
+#analytical-eng {
+    background-color:cornflowerblue;
+}
+.texto-orador {
+    width: 90%;
+    font-family: "Lato", sans-serif;
+    text-align: justify;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: smaller;
+    line-height: 1.7em;
+}
+
+/* ================ LUGAR ==================*/
+
+#BA-lugar{
+    position: relative;
+    width: 100%;
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+    background-color: #37303f;
+    }
+
+#carousel-ba  {
+    width: 49.9%;
+    height:100%;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+    padding: 0;
+ }     
+ 
+#octubre-txt {
+    width: 49%;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    background-color: #37303f;
+    color: #FFF;
+    line-height: 2em;
+    padding: 2%;
+    text-align: justify; 
+    border-style: solid;
+    border-width: 1%;
+    border-color: gray;
+}
+
+#conoce {
+    margin-left: 0;
+}
+main, section {
+    margin-bottom: 1em;
+}
+.oradores, .BA-lugar, .conviertete {
+    margin-bottom: 2em;
+}
+
+/*================= CONVERTITE ============*/
+.convertite {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+.ignite {
+    text-decoration-line: underline;
+    text-decoration-style: dotted ;
+    text-decoration-color: black;
+}
+
+.inscripcion-form {
+    margin-top: 4%;
+    position: relative;  
+}
+
+.input {
+    display: inline-block;
+    margin: 0 2.5% 2% 2%;
+    padding: 1% 1%;     
+    width: 45%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: gray;   
+}
+
+#inscripcion-txt {
+    position: relative;
+    display: block;
+    margin: 1% 0 2% 2%;
+    padding: 0%;
+    width: 94%;
+    border-style:none;
+}
+ #tema-charla { 
+    display: block;
+    position: relative;
+    padding: 1%;
+    min-width: 95%;
+    margin-left: 2%;
+    height: 200px;
+    border-radius: 10px; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7EAEF;
+    border-radius: 10px;
+} 
+
+#btn_inscripcion {
+    width: 95%;   
+    background-color:  #97c83e;
+    font-size: larger;
+}
+
+/*================= FOOTER ==================*/
+
+footer {
+    background: linear-gradient(to right, #1d3744, #1d5271);
+    color: whitesmoke;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    flex-direction: row;
+    padding: 0.5% 0;
+    flex-wrap: nowrap;
+    height: 60px ;
+    align-self: baseline;
+
+}
+
+.footer-item {
+    padding: 1% 3% 0 3%;
+    text-align: center;
+    flex-wrap: wrap;
+    max-height: 50px;
+
+}
+
+/* ================ END HOME ===============*/
+
+/* ================ TICKETS ================*/
+html {
+    height: 10vh;
+}
+body{ min-height: 100vh; margin:0; }
+
+
+/* =============== HEADER ======== */
+#contact-div{
+    margin: 0 10%;
+}
+
+.nav-tickets {
+    height: 55px;
+    padding-top: 0.5%;
+}
+
+.caja-tickets {
+    width: 55%;
+    vertical-align: middle;
+    display: inline-flex;
+    position: relative; 
+    margin-left: 25%;
+    padding-bottom: 0.4%;
+    justify-content: right;
+} 
+
+.conf-tickets {
+    display: inline-block;
+    margin-top: 0.2rem;
+    color: white;
+    font-size: larger;
+    margin-left: 5%;
+    
+}
+/* ==============MAIN - CATEGORIAS =============== */
+#container-categorias {
+    margin-top: 2%;
+    width: 55%;
+    align-items: center;
+}
+#container-categorias h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    margin: 5%;
+}
+
+#container-categorias h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5%;
+}
+.discount {
+    font-weight: bolder;
+    text-decoration-line: none;
+    margin: 5%;
+}
+.discount:hover {
+    transform: scale(2);
+    font-size: 30px;
+    text-decoration-line: none;
+    color:  #97c83e;
+    font-weight: 800;
+}
+
+#container-categorias p {
+    font-family: "Lato", sans-serif;
+    font-size:smaller ;
+    margin: 5%;
+}
+
+.card {
+    border-style: solid;
+    border-width: 3px;
+    margin: 0.5%;
+    padding: 2% 0;
+    width:30%;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.card-estudiante {
+    border-color: #6796ca;
+}
+
+.card-trainee{ 
+    border-color:#79afb9;
+}
+
+.card-junior {
+    border-color:#e7d084 ;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-width: 5px;
+}
+
+/* ============ FORM VENTA ============ */
+
+.venta {
+    width: 58%;
+}
+
+.venta-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+.input-venta {
+    padding: 1% 1%; 
+    border-style: solid;
+    border-width: 1px;
+    border-color:#e4eaf5;
+    border-radius: 2px;    
+    
+}
+.nombre {
+    display: inline-block;
+    width: 49%;
+    margin: 2.5% 0;
+}
+.venta-email {
+    width: 100%;
+    margin: 0;
+}
+
+.form-titulos {
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+padding: 0;
+margin-top: 2%;
+justify-content:space-between;
+}
+
+.cantidad-categoria {
+    text-align: left;
+    width: 49%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-weight: 600;
+}
+ .datos {
+    width: 100%;   
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+ }
+  
+#input-cantidad, #input-categoria {
+    width: 49%;
+ } 
+
+.resultado {
+    background-color:#cbe5fe;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 2px;
+    margin-top: 5%;
+    padding: 2%;
+
+}
+.botones-venta {
+display: flex;
+justify-content: space-between;
+}
+
+.btn-venta {
+    background-color:  #97c83e;
+    width: 49%;
+    display:inline-block;
+    position: relative;
+    height: 2.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 1%;
+    color: white;
+    border-radius: 2px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+
+}
+
+.btn-venta:hover {
+        background: linear-gradient(greenyellow, #28a744);
+        transform: scale(1.05);
+}
+
+/* ================= ALERT ==================== */
+.alerta {
+    display: none;
+    width: 50%;
+    padding: 0 0.5% 0.5% 0.5% ;
+    
+    background-color: white;
+    color: #AAA;
+    border: #6f3ec7 solid 5px;
+    border-radius: 5px;
+    opacity: 1;
+    z-index: index 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    text-align: center;
+  }
+  
+  /* .alert.success {background-color: #04AA6D;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;} */
+  
+  .closebtn {
+    margin-left: 15px;
+    color: red;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
