@@ -486,7 +486,7 @@ body{ min-height: 100vh; margin:0; }
 
 .card:hover {
     transition: 0.3s;
-    border-width: 4px;
+    transform: scale(1.02);
 }
 
 /* ============ FORM VENTA ============ */
