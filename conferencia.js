@@ -22,7 +22,6 @@ function dataInput() {
     validateData();
     validateEmail();
     if ((verifMail == false) || (verifNomb == false) || (verifApell == false)) {
-        // borrarData();
         cantidad.value = "";
       }
 
@@ -35,7 +34,6 @@ function dataInput() {
 }
 
 function calcTotal() {
-    correo.style.outline="1px solid #e4eaf5";
     let cant = Math.abs(Math.trunc(cantidad.value));
     cantidad.value = "";
     cantidad.value = cant;
