@@ -1,12 +1,13 @@
-var nombre = document.getElementById("nombre");
-var apellido = document.getElementById("apellido");
+let nombre = document.getElementById("nombre");
+let apellido = document.getElementById("apellido");
 var correo = document.getElementById("correo");
 var cantidad = document.getElementById("input-cantidad");
 var categ = document.getElementById("input-categoria");
 var verifMail = true;
 var verifNomb = true;
 var verifApell = true;
-const precio = 200;
+
+let precio = 200;
 
 function borrarData() {
     nombre.value = "";
@@ -19,29 +20,17 @@ function borrarData() {
 }
 
 function dataInput() {
-    validateData();
+    validateData()
     validateEmail();
     if ((verifMail == false) || (verifNomb == false) || (verifApell == false)) {
         cantidad.value = "";
       }
-
-     calcTotal();
- 
+     calcTotal();   
      verifMail = true ;
      verifNomb = true;
-     verifApell = true;
-    
+     verifApell = true;   
 }
 
-function calcTotal() {
-    let cant = Math.abs(Math.trunc(cantidad.value));
-    cantidad.value = "";
-    cantidad.value = cant;
-    let cat = categ.value;
-    let descuento= (cant * cat);
-    let precioFinal = (precio * descuento).toFixed(2);
-    let textoTotal = document.getElementById("calculado").textContent = "Total a pagar: $ " + precioFinal;    
-}
 
 function validateEmail() {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value)){
@@ -74,4 +63,56 @@ function alertaNombre() {
 
 function noAlertaNombre () {
     document.getElementById("alerta-nombre").style.display = 'none';
+}
+
+
+function calcTotal() {
+    let cant = Math.abs(Math.trunc(cantidad.value));
+    cantidad.value = "";
+    cantidad.value = cant;
+    let cat = categ.value;
+     let descuento= (cant * cat);
+     let precioFinal = (precio * descuento).toFixed(2);
+    let textoTotal = document.getElementById("calculado").textContent = "Total a pagar: $ " + precioFinal;   
+    if (precioFinal !=0) {
+    muestraTotal(); }
+}
+
+function muestraTotal(){
+    if (verifMail == true && verifNomb == true && verifApell == true) {
+    let tipoEntrada = "";
+    let precioCategoria = categ.value;
+   
+
+    switch (precioCategoria) {
+        case "0.2" : 
+        tipoEntrada = "Estudiante";
+        break;
+        case "0.5" : 
+        tipoEntrada = "Trainee";
+        break;
+        case "0.85" : 
+        tipoEntrada = "Junior";
+        break;
+        case "1" : 
+        tipoEntrada = "General";
+        break;
+        
+    }
+   
+    let listCant = document.getElementById("li-cantidad").textContent = "Cantidad de entradas: " +  Math.abs(Math.trunc(cantidad.value));  
+
+    let listCateg = document.getElementById("li-categoria").textContent = "Categoría: " + tipoEntrada; //categ.value
+    
+    precioCategoria = parseFloat(precioCategoria)*precio;
+    let listPrecio = document.getElementById("li-precioUnit").textContent = "Precio unitario: $ " + (precioCategoria); 
+   
+    let listTotal = document.getElementById("li-total").innerText = "Total: $  " +  Math.abs(Math.trunc(cantidad.value)) * (categ.value*precio) ; 
+
+    document.getElementById("totalOK").style.display = 'block';
+    } 
+}
+
+function noAlertaTotal () {
+    document.getElementById("totalOK").style.display = 'none';
 }

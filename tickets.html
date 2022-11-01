@@ -76,7 +76,7 @@
       </div>
     </main>
 
-    <!-- // =============== ALERTA ============== // -->
+    <!-- // =============== ALERTAS ============== // -->
     <div class = "alerta" id="alerta-email" >
       <span class="closebtn" onclick = noAlertaMail()>&times;</span>
       <div class="mensaje">
@@ -98,6 +98,22 @@
       </div>  
     </div>
 
+    <div class = "totalOK" id = "totalOK" >
+      <span class="closebtn" onclick = noAlertaTotal()>&times;</span>
+      <div class = "mensaje">
+        <div id = "iconoOK"><img src="./Images/ok.png" width="15%" alt = "OK icon created by sonnycandra - Flaticon"></div>
+      <h3> Resumen de tu compra</h3><br>
+        <div class = "resumen" id="resumen">
+          <ul>
+            <li id="li-cantidad"> </li>
+            <li id="li-categoria"></li>
+            <li id ="li-precioUnit"> </li><br>
+            <li id ="li-total">  </li>
+        </ul>
+    </div>
+      </div>  
+    </div>
+
     <!-- // ===================================== // -->
 
 <!-- SECTION VENTAS -->
@@ -112,7 +128,8 @@
     <div class = "formulario" >
       <form>
           <div class="container venta-form">
-              <input type="text"  class="input-venta nombre" placeholder = "Nombre" id = "nombre" required>
+              <input type="text"  class="input-venta nombre" placeholder = "Nombre" id = "nombre" required> 
+              <!-- required funciona si el boton submit está dentro del form Yo no lo hice así por eso valido de otro modo -->
               <input type="text" id="apellido" class="input-venta nombre" placeholder = "Apellido">
 
               <input type="email"  class="input-venta venta-email" id = "correo" placeholder = "Correo" >
@@ -152,8 +169,7 @@
             <button type="submit" class= btn-venta id="btn_resumen"  onclick = dataInput()>
               Resumen
             </button>
-          </div>
-     
+          </div> 
   </section>
   <script src="conferencia.js"></script>
 
