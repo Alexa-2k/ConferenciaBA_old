@@ -47,7 +47,6 @@ nav a {
 .caja {
     width: 45%;
     display: inline-flex;
-    /* position: absolute;  */
     justify-content: space-between;
     margin-left: 22.5%;
     padding-top: 2%;
@@ -113,7 +112,6 @@ h1 {
 .btn {
     position: relative;
     display: inline-block;
-
     height: 2.5em;
     font-size: 1em;
     font-weight: 400;
@@ -355,7 +353,6 @@ main, section {
     border-style: solid;
     border-width: 1px;
     border-color: #E7EAEF;
-    border-radius: 10px;
 } 
 
 #btn_inscripcion {
@@ -450,7 +447,6 @@ body{ min-height: 100vh; margin:0; }
 .discount:hover {
     transform: scale(2);
     transition: 0.3s;
-    font-size: 30px;
     text-decoration-line: none;
     color:  #97c83e;
     font-weight: 800;
@@ -460,15 +456,15 @@ body{ min-height: 100vh; margin:0; }
     font-family: "Lato", sans-serif;
     font-size:smaller ;
     margin: 5%;
+    flex-wrap: nowrap;
 }
 
 .card {
     border-style: solid;
-    border-width: 3px;
+    border-width: 4px;
     margin: 0.5%;
     padding: 2% 0;
     width:30%;
-    flex-wrap: nowrap;
     text-align: center;
 }
 
@@ -521,12 +517,12 @@ body{ min-height: 100vh; margin:0; }
 }
 
 .form-titulos {
-display: flex;
-flex-wrap: nowrap;
-flex-direction: row;
-padding: 0;
-margin-top: 2%;
-justify-content:space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 2%;
+    justify-content:space-between;
 }
 
 .cantidad-categoria {
@@ -557,8 +553,8 @@ justify-content:space-between;
 
 }
 .botones-venta {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-venta {
@@ -571,16 +567,16 @@ justify-content: space-between;
     font-size: 1.1rem;
     padding: 1%;
     color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-top: 5%;
     margin-bottom: 3%;
 
 }
 
 .btn-venta:hover {
-        background: linear-gradient(greenyellow, #28a744);
-        transform: scale(1.05);
-        transition: 0.3s;
+    background: linear-gradient(greenyellow, #28a744);
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 /* ================= ALERT ==================== */
@@ -591,7 +587,7 @@ justify-content: space-between;
     background-color: #fffff0;
     color: #AAA;
     border: #ffc900 solid 5px;
-    border-radius: 5px;
+    border-radius: 7px;
     opacity: 1;
     z-index: index 1;
     transition: opacity 0.6s;
@@ -614,9 +610,8 @@ justify-content: space-between;
     background-color:  #EAF6F6;
     color: #97c83e;
     border:  #97c83e solid 5px;
-    border-radius: 5px;
+    border-radius: 7px;
     opacity: 1;
-    /* z-index: index 4; */
     transition: opacity 0.6s;
     margin-bottom: 15px;
     position: fixed;
@@ -640,6 +635,7 @@ justify-content: space-between;
     margin-left: 15px;
     background-color: #FFA1A1;
     color: #FFF;
+    border-radius: 3px;
     font-weight: bolder;
     float: right;
     font-size: 22px;
