@@ -40,7 +40,7 @@
       <div class="container" id="container-categorias">
         <div class="row">
 
-          <div class="col card card-estudiante" id= "estudiantes">
+          <div class="col card card-estudiante" id= "estudiantes" >
             <div class = categoria>
             <h3> Estudiantes</h3>
             </div>
@@ -51,7 +51,7 @@
             <div class="aclaracion"> <p>* presentar documentación</p></div>
           </div>
 
-          <div class="col card card-trainee" id= "trainee">
+          <div class="col card card-trainee" id= "trainee" >
             <div class = categoria>
               <h3> Trainee</h3>
             </div>
@@ -62,7 +62,7 @@
             <div class="aclaracion"> <p>* presentar documentación</p></div>
           </div>
 
-          <div class="col card card-junior" id= "junior">
+          <div class="col card card-junior" id= "junior" >
             <div class = categoria>
               <h3> Junior</h3>
             </div>
@@ -101,18 +101,33 @@
     <div class = "totalOK" id = "totalOK" >
       <span class="closebtn" onclick = noAlertaTotal()>&times;</span>
       <div class = "mensaje">
-        <div id = "iconoOK"><img src="./Images/ok.png" width="15%" alt = "OK icon created by sonnycandra - Flaticon"></div>
+        <div id = "iconoOK"><img src="./Images/ok.png" width="15%" alt = "OK icon created by sonnycandra - Flaticon"></div><br>
       <h3> Resumen de tu compra</h3><br>
         <div class = "resumen" id="resumen">
           <ul>
             <li id="li-cantidad"> </li>
             <li id="li-categoria"></li>
             <li id ="li-precioUnit"> </li><br>
-            <li id ="li-total">  </li>
+            <li id ="li-total">  </li><br>
+            <h4> ¡Muchas gracias! </h4> 
+
         </ul>
-    </div>
+        <span type="submit" class = "btn-pago" onclick = noAlertaTotal()>Ir al sector de pago</span>
+
+      </div>
       </div>  
     </div>
+
+    <div class = "alerta" id= "alerta-cantidad" >
+      <span class="closebtn" onclick = noAlertaCantidad()>&times;</span>
+      <div class = "mensaje">
+        <img src="./Images/warning2.png" width="15%" alt = "cantidad-entradas-incorrecta. Warning icons created by Andrean Prabowo - Flaticon">
+      <h2> Cantidad de entradas </h2>
+      <h3> Por favor, ingresá una cantidad válida</h3>
+    
+      </div>  
+    </div>
+
 
     <!-- // ===================================== // -->
 
@@ -126,7 +141,7 @@
     </div>
 
     <div class = "formulario" >
-      <form>
+      <form class = "form-datos">
           <div class="container venta-form">
               <input type="text"  class="input-venta nombre" placeholder = "Nombre" id = "nombre" required> 
               <!-- required funciona si el boton submit está dentro del form Yo no lo hice así por eso valido de otro modo -->
@@ -213,5 +228,3 @@
 </body>
 
 </html>
-
- 
