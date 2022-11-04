@@ -77,7 +77,7 @@ function noAlertaCantidad () {
 function calcTotal() {
     let cant = cantidad.value;
     cant = Number(cant);
-    while (cant < 0 || (!Number.isInteger(cant))) { 
+    while (cant < 0 || (!Number.isInteger(cant)) || cant == e) { 
         alertaCantidad();
         cantidad.value = 0;
         cant = 0;
