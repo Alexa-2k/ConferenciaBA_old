@@ -647,16 +647,16 @@ justify-content: space-between;
     color: #FFF;
     font-weight: bolder;
     float: right;
-    font-size: 22px;
+    font-size: 23px;
     height: 25px;
     width: 25px;
-    padding-bottom: 1px;
+    padding-bottom: 4%;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .closebtn:hover {
-    transform: scale(1.5);
+    transform: scale(1.4);
     transition: 0.3s;
   }
 
