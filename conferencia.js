@@ -9,14 +9,46 @@ var verifApell = true;
 
 let precio = 200;
 
+
+function colorize() {
+    switch (categ.value) {
+
+        case "0.2":
+            document.getElementById("estudiantes").style.backgroundColor = "yellow";
+            document.getElementById("trainee").style.backgroundColor = "";
+            document.getElementById("junior").style.backgroundColor = "";
+            break;
+             
+    
+
+    case "0.5":
+            document.getElementById("trainee").style.backgroundColor = "yellow";
+            document.getElementById("estudiantes").style.backgroundColor = "";
+            document.getElementById("junior").style.backgroundColor = "";
+            break; 
+   case "0.85":
+             document.getElementById("junior").style.backgroundColor = "yellow";
+             document.getElementById("trainee").style.backgroundColor = "";
+             document.getElementById("estudiantes").style.backgroundColor = "";
+            break;
+    default: 
+            document.getElementById("junior").style.backgroundColor = "";
+             document.getElementById("trainee").style.backgroundColor = "";
+             document.getElementById("estudiantes").style.backgroundColor = "";
+            break;
+
+        }    }    
+
+    
+
 function borrarData() {
-    nombre.value = "";
-    apellido.value = "";
-    correo.value = "";
-    cantidad.value = "0";
-    categ.value = "";
-    document.getElementById("calculado").textContent = "Total a pagar:  $  ";
-    correo.style.outline="1px solid #e4eaf5";
+     nombre.value = "";
+     apellido.value = "";
+     correo.value = "";
+     cantidad.value = "0";
+     categ.value = "";
+     document.getElementById("calculado").textContent = "Total a pagar:  $  ";
+
 }
 
 function dataInput() {
@@ -65,15 +97,29 @@ function noAlertaNombre () {
     document.getElementById("alerta-nombre").style.display = 'none';
 }
 
+function alertaCantidad() {
+    document.getElementById("alerta-cantidad").style.display = 'block';
+}
+
+function noAlertaCantidad () {
+    document.getElementById("alerta-cantidad").style.display = 'none';
+}
+
 
 function calcTotal() {
-    let cant = Math.abs(Math.trunc(cantidad.value));
-    cantidad.value = "";
-    cantidad.value = cant;
+    let cant = cantidad.value;
+    cant = Number(cant);
+    while (cant < 0 || (!Number.isInteger(cant))) { 
+        alertaCantidad();
+        cantidad.value = 0;
+        cant = 0;
+    } 
+    //cantidad.value = cant;
     let cat = categ.value;
-     let descuento= (cant * cat);
-     let precioFinal = (precio * descuento).toFixed(2);
+    let descuento= (cant * cat);
+    let precioFinal = (precio * descuento).toFixed(2);
     let textoTotal = document.getElementById("calculado").textContent = "Total a pagar: $ " + precioFinal;   
+    
     if (precioFinal !=0) {
     muestraTotal(); }
 }
@@ -82,9 +128,7 @@ function muestraTotal(){
     if (verifMail == true && verifNomb == true && verifApell == true) {
     let tipoEntrada = "";
     let precioCategoria = categ.value;
-   
-
-    switch (precioCategoria) {
+     switch (precioCategoria) {
         case "0.2" : 
         tipoEntrada = "Estudiante";
         break;
@@ -100,14 +144,14 @@ function muestraTotal(){
         
     }
    
-    let listCant = document.getElementById("li-cantidad").textContent = "Cantidad de entradas: " +  Math.abs(Math.trunc(cantidad.value));  
+    let listCant = document.getElementById("li-cantidad").textContent = "Cantidad de entradas: " +  cantidad.value;  
 
     let listCateg = document.getElementById("li-categoria").textContent = "Categoría: " + tipoEntrada; //categ.value
     
     precioCategoria = parseFloat(precioCategoria)*precio;
     let listPrecio = document.getElementById("li-precioUnit").textContent = "Precio unitario: $ " + (precioCategoria); 
    
-    let listTotal = document.getElementById("li-total").innerText = "Total: $  " +  Math.abs(Math.trunc(cantidad.value)) * (categ.value*precio) ; 
+    let listTotal = document.getElementById("li-total").innerText = "Total: $  " +  (Number(cantidad.value) * (categ.value*precio)).toFixed(2) ; 
 
     document.getElementById("totalOK").style.display = 'block';
     } 
