@@ -9,38 +9,6 @@ var verifApell = true;
 
 let precio = 200;
 
-
-function colorize() {
-    switch (categ.value) {
-
-        case "0.2":
-            document.getElementById("estudiantes").style.backgroundColor = "yellow";
-            document.getElementById("trainee").style.backgroundColor = "";
-            document.getElementById("junior").style.backgroundColor = "";
-            break;
-             
-    
-
-    case "0.5":
-            document.getElementById("trainee").style.backgroundColor = "yellow";
-            document.getElementById("estudiantes").style.backgroundColor = "";
-            document.getElementById("junior").style.backgroundColor = "";
-            break; 
-   case "0.85":
-             document.getElementById("junior").style.backgroundColor = "yellow";
-             document.getElementById("trainee").style.backgroundColor = "";
-             document.getElementById("estudiantes").style.backgroundColor = "";
-            break;
-    default: 
-            document.getElementById("junior").style.backgroundColor = "";
-             document.getElementById("trainee").style.backgroundColor = "";
-             document.getElementById("estudiantes").style.backgroundColor = "";
-            break;
-
-        }    }    
-
-    
-
 function borrarData() {
      nombre.value = "";
      apellido.value = "";
