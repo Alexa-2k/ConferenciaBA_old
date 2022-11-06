@@ -111,9 +111,10 @@ function muestraTotal(){
         break;
         
     }
-   
-    let listCant = document.getElementById("li-cantidad").textContent = "Cantidad de entradas: " +  cantidad.value;  
 
+    let nombreCliente = document.getElementById("li-nombre").textContent = nombre.value + " " + apellido.value ;
+    let emailCliente = document.getElementById("li-email").textContent = "E-mail: " +  correo.value;
+    let listCant = document.getElementById("li-cantidad").textContent = "Cantidad de entradas: " +  cantidad.value;  
     let listCateg = document.getElementById("li-categoria").textContent = "Categoría: " + tipoEntrada; //categ.value
     
     precioCategoria = parseFloat(precioCategoria)*precio;
