@@ -622,7 +622,7 @@ justify-content: space-between;
     padding: 1% ;
     padding-top: 0.7;
     background-color: #FFF;
-    color: #AAA;
+    color: #7D7D7D;
     border:  #97c83e solid 2px;
     border-radius: 7px;
     opacity: 1;
@@ -632,16 +632,26 @@ justify-content: space-between;
     top: 15%;
     left: 30%;
     text-align: center;
-
  }
 
+ #resumen li { 
+    text-align: left;
+
+}
  .totalOK h3, h4 {
     font-weight: 400;
  }
 
- .totalOK li {
-     color: #AAA;
-     font-size: 1rem;
+ .persona, .entradas {
+    display: inline-flex;
+    color: #7D7D7D;
+    font-size: 1rem;
+    text-justify:left;
+    width: 49%;
+    margin-left: 1%;
+ }
+ .entradas {
+    padding-left: 10%;
  }
 
  #li-total {
@@ -685,3 +695,4 @@ justify-content: space-between;
     margin-bottom: 3%;
 
   }
+
