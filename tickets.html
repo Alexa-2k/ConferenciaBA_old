@@ -101,20 +101,31 @@
     <div class = "totalOK" id = "totalOK" >
       <span class="closebtn" onclick = noAlertaTotal()>&times;</span>
       <div class = "mensaje">
-        <div id = "iconoOK"><img src="./Images/ok.png" width="15%" alt = "OK icon created by sonnycandra - Flaticon"></div><br>
-      <h3> Resumen de tu compra</h3><br>
-        <div class = "resumen" id="resumen">
-          <ul>
-            <li id="li-cantidad"> </li>
-            <li id="li-categoria"></li>
-            <li id ="li-precioUnit"> </li><br>
-            <li id ="li-total">  </li><br>
+        <div id = "iconoOK"><img src="./Images/ok.png" width="15%" alt = "OK icon created by sonnycandra - Flaticon">
+        </div><br>
+        <h3> Resumen de tu compra</h3><br>
+        <div class = "container" id="resumen">
+          <div class = "row persona" >
+            <ul>
+              <li> Comprador: </li>
+              <li id="li-nombre"> </li>
+              <li id="li-apellido"></li>
+              <li id ="li-email"> </li><br>
+              </ul>
+          </div>
+          
+          <div class = "col entradas">
+            <ul>
+              <li id="li-cantidad"> </li>
+              <li id="li-categoria"></li>
+              <li id ="li-precioUnit"> </li><br>
+              
+            </ul>
+          </div>
+        </div>
+            <p id ="li-total">  </p><br>
             <h4> ¡Muchas gracias! </h4> 
-
-        </ul>
-        <span type="submit" class = "btn-pago" onclick = noAlertaTotal()>Ir al sector de pago</span>
-
-      </div>
+        <span type="submit" class = "btn-pago" onclick = noAlertaTotal()>Ir al sector de pago</span> 
       </div>  
     </div>
 
