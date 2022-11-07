@@ -104,10 +104,10 @@ h1 {
 }
 
 .botones-portada { 
-    position: absolute;
+    position: relative;
     display: block;
     right: 0%;
-    top:3%;
+    top:5%;
     width: 100%;
 }
 
