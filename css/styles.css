@@ -215,10 +215,10 @@ main{
     display: inline-block;
     align-content: center;
     padding: 2% 2% 0% 2%;
-    height: 2.5rem;
+    height: 2rem;
     padding-top: 2%;
     border-radius: 6px;
-    font-size: 0.75em;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 .t1{
