@@ -14,7 +14,8 @@ nav {
     box-sizing: border-box;
     width: 100%; 
     background-color: #37303f;
-    position: relative;
+    position: fixed;
+    z-index: 2;
     height: 80px;
 }
   
@@ -407,6 +408,8 @@ body{ min-height: 100vh; margin:0; }
 .nav-tickets {
     height: 55px;
     padding-top: 0.5%;
+    position: fixed;
+    z-index:2;
 }
 
 .caja-tickets {
