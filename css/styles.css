@@ -16,7 +16,7 @@ nav {
     background-color: #37303f;
     position: fixed;
     z-index: 2;
-    height: 80px;
+    height: 70px;
 }
   
 #logo { 
@@ -82,7 +82,7 @@ nav a:hover{
 .titulo-portada {
     position:absolute;
     display: block;
-    top: 30%;
+    top: 32%;
     right: 8%;
     padding: 1%; 
     bottom: 1%; 
@@ -107,7 +107,7 @@ h1 {
     position: relative;
     display: block;
     right: 0%;
-    top:5%;
+    top:8%;
     width: 100%;
 }
 
