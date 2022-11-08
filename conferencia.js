@@ -82,7 +82,6 @@ function calcTotal() {
         cantidad.value = 0;
         cant = 0;
     } 
-    //cantidad.value = cant;
     let cat = categ.value;
     let descuento= (cant * cat);
     let precioFinal = (precio * descuento).toFixed(2);
