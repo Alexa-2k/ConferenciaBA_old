@@ -408,8 +408,7 @@ body{ min-height: 100vh; margin:0; }
 .nav-tickets {
     height: 55px;
     padding-top: 0.5%;
-    position: fixed;
-    z-index:2;
+    position: relative;
 }
 
 .caja-tickets {
