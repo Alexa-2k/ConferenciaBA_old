@@ -14,7 +14,7 @@ function borrarData() {
      apellido.value = "";
      correo.value = "";
      cantidad.value = "0";
-     categ.value = "";
+     categ.value = "1";
      document.getElementById("calculado").textContent = "Total a pagar:  $  ";
 
 }
