@@ -68,27 +68,37 @@ h2 {
      
 } 
 
-.btn-logOK {
-  width: 10%; 
-  margin: 5% auto; 
-  background-color:  #97c83e;
-  display:inline-flex;
-  /* position: relative; */
-  height: 2.5rem;
-  font-weight: 400;
-  font-size: 1.1rem;
-  padding: 1.8% 0.8% 0.1% 0.8%;
-  color: white;
-  justify-content: center;
-  align-content: center;
-  border-radius: 4px;
-  border-color: transparent;
-}
+.btn-logOK, #btn_volver {
+    width: 10%; 
+    margin: 5% 43%; 
+    background-color: #97c83e;
+     /* position: relative; */
+    height: 2.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0.5% 0.8% 0.2% 0.8%;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    border-radius: 4px;
+    border-color: transparent;
+  }
 
- #btn_volver {
-margin-left: 35%;  
-}
-
+  #btn_volver {
+    width: 10%; 
+    margin: 3% 11%; 
+    background-color: #97c83e;
+     /* position: relative; */
+    height: 2.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0.5% 0.8% 0.2% 0.8%;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    border-radius: 4px;
+    border-color: transparent;
+  }  
 #volver {
 margin: 3% 33%;
 }

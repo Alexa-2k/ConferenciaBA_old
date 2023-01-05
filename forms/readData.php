@@ -8,13 +8,12 @@
 .btn-logOK {
   width: 10%; 
   margin: 5% 43%; 
-  background-color:  #97c83e;
-  display:inline-flex;
-  /* position: relative; */
+  background-color: #97c83e;
+ /* position: relative; */
   height: 2.5rem;
   font-weight: 400;
   font-size: 1.1rem;
-  padding: 0.8% 0.8% 0.1% 0.8%;
+  padding: 0.5% 0.8% 0.2% 0.8%;
   color: white;
   justify-content: center;
   align-content: center;
@@ -106,7 +105,7 @@ echo "</tr>";
 
 ?>
   <center><h1>Nombre de usuario ya registrado</h1></center>
-  <a id= "volver"><button type='button' class= 'btn-verde' id='btn_volver' onclick= "location.href='../registro.html';">Volver</button></a>
+  <a id= "volver"><button type='button'  id='btn_volver' onclick= "location.href='../registro.html';">Volver</button></a>
 
 <?php
 }else if ($buscaMail->num_rows==!0){

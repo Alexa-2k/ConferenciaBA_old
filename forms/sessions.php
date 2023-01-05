@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
-
-    #btn_volver {
-      position: relative;
-      top: 400px;
-      margin: 25%;           
-    } 
-   </style> 
- 
- 
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">  
-   <link rel="stylesheet" type="text/css" href="../css/registro.css">  
-   <link rel="stylesheet" type="text/css" href="../css/admin.css">
-   <link rel="stylesheet" type="text/css" href="../css/alerta.css">
-
-
-   </head>
-<body>
 <?php
 $adminUser = 'HAL';
 $adminPwd = '2001';
@@ -49,7 +24,36 @@ $passAsk == $adminPwd))
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
                 
-        // CONSULTA A LA BASE
+        ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+
+    #btn_volver {
+      position: relative;
+      top: 400px;
+      margin: 25%;           
+    } 
+   </style> 
+ 
+ 
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">  
+   <link rel="stylesheet" type="text/css" href="../css/registro.css">  
+   <link rel="stylesheet" type="text/css" href="../css/admin.css">
+   <link rel="stylesheet" type="text/css" href="../css/alerta.css">
+
+
+   </head>
+<body>
+     
+<?php
+// CONSULTA A LA BASE
 
         $answer = $my_query->query("SELECT * FROM usuario WHERE username = '$userAsk' AND pwd = '$passAsk'");
 
@@ -60,7 +64,7 @@ $passAsk == $adminPwd))
                     <span class="closebtn" onclick = noAlertaUser()> &times;</span>
                     <div class="mensaje">
                       <img src="../Images/warning2.png" width= "15%" alt="alerta-user-no-valido. Warning icons created by Freepik - Flaticon">
-                    <h2> Usuario no registrado</h2>
+                    <h2> Usuario o contraseña incorrectos</h2>
                    
                     </div>
                     
@@ -81,9 +85,29 @@ $passAsk == $adminPwd))
                 <?php
 
                 } else {
-                    echo "right user";
-                    header("Location: ../index.html");
-                    exit();
+                  ?>
+                    <div class = "alerta" id="alerta-loginOK" >
+                    <span class="closebtn" onclick = noAlertaLogin()> &times;</span>
+                    <div class="mensaje">
+                      <img src="../Images/1632603.png" width= "15%" alt="login-exitoso. Flaticon">
+                    <h2> Login exitoso. Cerrá este cuadro para ingresar</h2>
+                   
+                    </div>
+                    <script language="javascript">
+                        alertaLogin()
+                        function noAlertaLogin() { 
+                            document.getElementById("alerta-loginOK").style.display = 'none';
+                            window.location.href='../index.html';
+                        } 
+                        function alertaLogin() {
+                            document.getElementById("alerta-loginOK").style.display = 'block';
+                    }
+                    </script>
+
+
+                    <?php
+                    // header("Location: ../index.html");
+                    // exit();
                 }
                 $my_query->close();
         }

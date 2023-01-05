@@ -93,7 +93,7 @@ echo "<td class='datos'>" . $row['user_type'] . "</td>"
 </div>
 
 <!-- FORMULARIO PARA EDICION O INCORPORACIÓN DE NUEVO USUARIO  -->
-<a name="edit"></a>
+<a name="Edicion"></a>
 <main>
         
     <div class="row justify-content-center">
@@ -103,7 +103,8 @@ echo "<td class='datos'>" . $row['user_type'] . "</td>"
         </div>
           
          <input type="hidden" name="ID" value="<?php echo $ID; ?>">
-<table class= "datos">
+
+         <table class= "datos">
 <caption><h2>EDICIÓN DE USUARIOS</h2><br></caption>
         <tr> 
           <td>
@@ -149,7 +150,7 @@ echo "<td class='datos'>" . $row['user_type'] . "</td>"
           </tr>
         </table>
           <div>
-           <button type="submit" class= "btnadmin btn-registro " id="btn_edit" name = "update">Guardar cambios</button>
+           <button type="submit" class= "btnadmin btn-registro " onclick = "window.location.href='#Edicion';" id="btn_edit" name = "update">Guardar</button>
            </div>    
       </form>
       </div>
