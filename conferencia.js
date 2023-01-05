@@ -31,7 +31,6 @@ function dataInput() {
      verifApell = true;   
 }
 
-
 function validateEmail() {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value)){
         verifMail = true;   
@@ -73,6 +72,12 @@ function noAlertaCantidad () {
     document.getElementById("alerta-cantidad").style.display = 'none';
 }
 
+function noAlertaUser() { 
+    document.getElementById("alerta-user").style.display = 'none';
+} 
+function alertaUser() {
+    document.getElementById("alerta-user").style.display = 'block';
+}
 
 function calcTotal() {
     let cant = cantidad.value;
@@ -128,3 +133,4 @@ function muestraTotal(){
 function noAlertaTotal () {
     document.getElementById("totalOK").style.display = 'none';
 }
+
