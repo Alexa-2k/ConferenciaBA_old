@@ -28,11 +28,38 @@ nav {
     transition: 0.3s;
 }
 
-nav a {
+.caja-tickets {
+    width: 51%;
     vertical-align: middle;
-    margin-left: 2.66%;
-    color: gray; 
-    text-decoration: none;  
+    display: inline-flex;
+    padding-bottom: 0.4%;
+    justify-content: space-between;
+    margin-left: 21% !important;
+    padding-top: 0.5%;
+} 
+
+nav a {
+  vertical-align: middle;
+    /* margin-left: 2.66%; */
+  color: gray !important; 
+  text-decoration: none !important;  
+} 
+
+.nav-link  {
+    width:100%; 
+    white-space: nowrap !important; 
+    text-decoration: none !important;
+    color: grey !important;
+
+  }
+
+.nav-link:hover{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.colorverde {
+    color: green !important;
 }
 
 #conf {
@@ -43,24 +70,6 @@ nav a {
     color: white;
     font-size: larger;
     
-}
-
-.caja {
-    width: 45%;
-    display: inline-flex;
-    /* position: absolute;  */
-    justify-content: space-between;
-    margin-left: 22.5%;
-    padding-top: 2%;
-} 
-
-nav a:hover{
-    color: white ;
-    text-decoration: none;
-}
-
-#nav-tickets {
-    color: #28a744;
 }
 
 /* ============PORTADA============== */
@@ -110,11 +119,13 @@ h1 {
     top:8%;
     width: 100%;
 }
-
+.darkgreen {
+    background-color: green;
+}    
 .btn {
     position: relative;
     display: inline-block;
-
+    width:30%;
     height: 2.5em;
     font-size: 1em;
     font-weight: 400;
@@ -138,8 +149,8 @@ h1 {
     border-width: 1px;
 }
 
-#tickets {
-    background-color: #28a744;
+.nav-registro {
+    color: #28a744;
     width: 35%;
 }
 
@@ -149,6 +160,7 @@ h1 {
 main{
     display: block;
     position: relative;
+
 }
 
 #container-oradores {
@@ -405,21 +417,15 @@ body{ min-height: 100vh; margin:0; }
     margin: 0 10%;
 }
 
-.nav-tickets {
+/* .nav-tickets {
     height: 55px;
+    margin-top: 0;
+    top: 0;
     padding-top: 0.5%;
-    position: relative;
-}
+    position: fixed;
+} */
 
-.caja-tickets {
-    width: 55%;
-    vertical-align: middle;
-    display: inline-flex;
-    position: relative; 
-    margin-left: 25%;
-    padding-bottom: 0.4%;
-    justify-content: right;
-} 
+
 
 .conf-tickets {
     display: inline-block;
@@ -431,6 +437,7 @@ body{ min-height: 100vh; margin:0; }
 }
 /* ==============MAIN - CATEGORIAS =============== */
 #container-categorias {
+    position: relative;
     margin-top: 2%;
     width: 55%;
     align-items: center;  
@@ -567,9 +574,10 @@ display: flex;
 justify-content: space-between;
 }
 
-.btn-venta {
+
+.btn-verde {
     background-color:  #97c83e;
-    width: 49%;
+    width: 49%; 
     display:inline-block;
     position: relative;
     height: 2.5rem;
@@ -578,15 +586,36 @@ justify-content: space-between;
     padding: 1%;
     color: white;
     border-radius: 4px;
-    margin-top: 5%;
+    margin-top: 5%; 
     margin-bottom: 3%;
-
+    
 }
 
-.btn-venta:hover {
+.btn-verde:hover {
         background: linear-gradient(greenyellow, #28a744);
         transform: scale(1.05);
         transition: 0.3s;
+}
+
+.btnadmin {
+    background-color:  #97c83e;
+    width: 50%; 
+    display:inline-block;
+    position: relative;
+    height: 2.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 1%;
+    color: white;
+    border-radius: 4px;
+    margin-top: 5%; 
+    margin-bottom: 3%;
+    margin-left: 27%;
+}
+
+.col {
+display: inline-block;
+width: 33%;
 }
 
 /* ================= ALERT ==================== */
