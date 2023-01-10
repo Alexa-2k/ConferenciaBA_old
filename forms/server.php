@@ -44,4 +44,5 @@ if (isset($_GET['del'])) {
 	mysqli_query($db, "DELETE FROM usuario WHERE ID=$ID");
 	$_SESSION['message'] = "Usuario eliminado!"; 
 	header('location: admin.php');
+	exit();
 }
