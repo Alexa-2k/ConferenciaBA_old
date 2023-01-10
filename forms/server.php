@@ -22,6 +22,7 @@
 	// 	mysqli_query($db, "INSERT INTO usuario (nombre, apellido, email, pwd, username) VALUES ('$nombre', '$apellido', '$email', '$password', '$username')"); 
 	// 	$_SESSION['message'] = "Usuario guardado"; 
 	// 	header('location: admin.php');
+	//	exit();	
 	// }
 
 // ...
@@ -36,6 +37,7 @@
 		mysqli_query($db, "UPDATE usuario SET nombre='$nombre', apellido='$apellido', username ='$username', email = '$email', pwd = '$password' WHERE ID=$ID");
 		$_SESSION['message'] = "Usuario actualizado!"; 
 		header('location: admin.php');
+		exit();
 }
 
 
