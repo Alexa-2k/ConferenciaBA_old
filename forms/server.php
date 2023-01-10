@@ -10,22 +10,6 @@
 	$username = "";
 	$ID = 0;
 	$update = true;
-	// $update = false;
-	// if (isset($_POST['save'])) {
-	// 	$nombre = $_POST['nombre'];
-	// 	$apellido = $_POST['apellido'];
-	// 	$email = $_POST['email'];
-	// 	$password = $_POST['pwd'];
-	// 	$username = $_POST['username'];
-	
-
-	// 	mysqli_query($db, "INSERT INTO usuario (nombre, apellido, email, pwd, username) VALUES ('$nombre', '$apellido', '$email', '$password', '$username')"); 
-	// 	$_SESSION['message'] = "Usuario guardado"; 
-	// 	header('location: admin.php');
-	//	exit();	
-	// }
-
-// ...
 	if (isset($_POST['update'])) {
 		$ID = $_POST['ID'];
 		$nombre = $_POST['nombre'];
@@ -48,3 +32,19 @@ if (isset($_GET['del'])) {
 	header('location: admin.php');
 	exit();
 }
+	// $update = false;
+	// if (isset($_POST['save'])) {
+	// 	$nombre = $_POST['nombre'];
+	// 	$apellido = $_POST['apellido'];
+	// 	$email = $_POST['email'];
+	// 	$password = $_POST['pwd'];
+	// 	$username = $_POST['username'];
+	
+
+	// 	mysqli_query($db, "INSERT INTO usuario (nombre, apellido, email, pwd, username) VALUES ('$nombre', '$apellido', '$email', '$password', '$username')"); 
+	// 	$_SESSION['message'] = "Usuario guardado"; 
+	// 	header('location: admin.php');
+	//	exit();	
+	// }
+
+// ...
